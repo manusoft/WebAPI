@@ -26,5 +26,6 @@ app.MapPlayersEndpoints();
 
 
 
+
 app.Run();
 
