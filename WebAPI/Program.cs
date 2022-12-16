@@ -4,7 +4,7 @@ using WebAPI.Data;
 using WebAPI;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<WebAPIContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("WebAPIContext") ?? throw new InvalidOperationException("Connection string 'WebAPIContext' not found.")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("WebAPIContext") ?? throw new InvalidOperationException("Connection string 'WebAPIContext' not found.")));
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
